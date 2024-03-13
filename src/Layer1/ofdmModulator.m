@@ -1,9 +1,10 @@
-function [ofdm_symb_cp, ofdm_spector, control] = ofdmModulator(input);
+function [ofdm_symb_cp, ofdm_spector, control] = ofdmModulator(input, refSignalConfig);
 
-rs_step = 7;
-rs_numbers = ceil(length(input) / rs_step);
-rs_sc(1, :) = 1 : rs_step + 1 : length(input) + rs_numbers;
-rs_val = ones(1, rs_numbers) * complex(sqrt(2)/2, sqrt(2)/2);
+%rs_step = 7;
+%rs_numbers = ceil(length(input) / rs_step);
+rs_cs = refSignalConfig.scInx; %rs_sc(1, :) = 1 : rs_step + 1 : length(input) + rs_numbers;
+rs_val = refSignalConfig.val; %rs_val = ones(1, rs_numbers) * complex(sqrt(2)/2, sqrt(2)/2);
+rs_numbers = length(rs_sc);
 guard_band = zeros(1, 20);
 cp_size = 20;
 k = 0;
