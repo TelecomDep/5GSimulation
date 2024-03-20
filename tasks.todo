@@ -1,4 +1,7 @@
 TODO LIST:
 - Сформировать основной скрипт с выданными заданиями (Ruslan V. Akhpashev);
-- referenceSignalMapping (Andrey Karpenko)
-- 
+- referenceSignalMapping (Andrey Karpenko);
+- реализовать функцию канала AWGN --> function [awgn_ofdm_symbols] = awgn_channel[ofdm_symbols] (Кацуро Михаил);
+- реализовать функцию канала Райса --> function [awgn_rice_ofdm_symbols] = rice_channel[ofdm_symbols] (Марина Буянова);
+- реализовать функцию канала Релейя --> function [awgn_rayleigh_ofdm_symbols] = rayleigh_channel[ofdm_symbols] (Иван, Андрей);
+- реализовать функцию рассчета потерь при распространении --> function [path_loss_coeff] = path_losses[config] (Кирилл);
